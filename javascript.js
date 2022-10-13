@@ -23,12 +23,13 @@ initializeGame();
 
 
 function dogFunction() {
-    const dogPic = document.createElement("IMG");
-    dogPic.setAttribute("src", "/images/dog.png");
+    const dogPic = document.createElement("IMG"); // create element for the image only (not displaying)
+    dogPic.setAttribute("src", "/images/dog.png"); 
     dogPic.setAttribute("width", "150");
     dogPic.setAttribute("alt", "dog image");
-    cells[cellIndex].appendChild(dogPic);
-
+    cells[cellIndex].appendChild(dogPic); // cells is variable and cellIndex is variable as well (refer to line 78) which also the same with cellIndex in html
+    //so it says that i want to display the image on the box and specifically which box.
+    //appenChild is the syntax itself.
     console.log("PRINTING A DOG !!!");
 }
 
@@ -47,13 +48,13 @@ function confetti(boolean) {
     let newDiv;
     
     if (boolean === true) {     
-        const boom = document.createElement("IMG");
-        newDiv = document.createElement("div")
+        const boom = document.createElement("IMG"); 
+        newDiv = document.createElement("div") // to create a new div/place for the image
         newDiv.setAttribute("id", "fullpage")
         boom.setAttribute("src", "/images/confetti2.gif");
         boom.setAttribute("alt", "confetti");
-        newDiv.appendChild(boom);
-        document.body.append(newDiv)
+        document.body.append(newDiv) // to display the new div
+        newDiv.appendChild(boom); // to display the image on the new div
         console.log("HORAYYY CONFETTTI !!!")        
     }
     else {
@@ -69,20 +70,17 @@ function confetti(boolean) {
 function initializeGame() {
     restartBtn.addEventListener("click", restartGame);
     cells.forEach((cell) => cell.addEventListener("click", cellClicked));
-    
-
     statusText.innerHTML = `${currentPlayer}'s turn`;
-
     gameRunning = true;
 }
 
-function cellClicked() {
+function cellClicked() { //to get the value only (not displaying)
     cellIndex = this.getAttribute("cellIndex"); // this will return 0 to 8
     //   cellIndex === 7
     console.log("cellIndex is: ", cellIndex);
     if (options[cellIndex] != "" || !gameRunning) {
         console.log("OPTIONS ARRAY IN CELL CLICKED FUNCTION IS: ", options);
-        // if options with cellindex value empty OR gameRunning is true
+        // if options with cellindex value is not empty OR gameRunning is true
         console.log("ERROR: YOU CANT CLICK THE SAME CELL TWICE !!!! OR THIS GAME HAS ENDED");
         return; // if existing options array has 'X' or 'O' value, stop or don't do anything!
     } else {
@@ -96,7 +94,8 @@ function cellClicked() {
 
 function updateCell(cell, index) { //to display the image of cat and dog
     options[index] = currentPlayer;
-    currentPlayer == "Hachi" ? dogFunction() : catFunction(); // display Jerry or dog in clicked cell
+    currentPlayer == "Hachi" ? dogFunction() : catFunction(); // display Jerry or dog in clicked cell.
+    // this is ternary operator that does if the currentPlayer is hachi execute dogFunction, else, execute catFunction.
     console.log("currentPlayer Line 96 is: ", currentPlayer);
 
     console.log("OPTIONS ARRAY IS:    ", options);
@@ -162,7 +161,7 @@ function checkWinner() {
         gameRunning = false;
         console.log("Game Over");
     } else if (!options.includes("")) {
-        statusText.textContent = `Draw!`;
+        statusText.textContent = `It's a Draw!`;
         gameRunning = false;
     } else {
         changePlayer();
