@@ -10,10 +10,8 @@
 - The first player to get 3 of her marks in a row (up, down, across, or diagonally) is the winner.
 - When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a draw.
 
-## Coding Approach
-
-#### Screenshots
-(images/screenshot.png)
+## Screenshots
+![](images/screenshot.png)
 
 ## Project Status
 - Project is Complete.
