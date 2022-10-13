@@ -28,7 +28,7 @@ Some areas that I want to improve are:
 
 ## Acknowledgements
 - Thanks to Joel and Loden for the help and support.
-- Thanks to Google and Youtube as well for being a good resouce that I can access anytime.
+- Thanks to Google and Youtube as well for being a good resource that I can access anytime.
 
 ## Contact
 - Created by Keshia Wijaya (@pawspower - kesh.learning@gmail.com) - feel free to contact me!
