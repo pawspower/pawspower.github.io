@@ -1,0 +1,54 @@
+body {
+    font-family: "Comic Neue", "montserrat";
+    font-size: large;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+}
+h1 {
+    font-size: 45px;
+    text-align: center;
+}
+
+.gameContainer {
+    display: grid;
+    grid-template-columns:repeat(3,auto);
+    width: 450px;
+    margin: auto;
+    text-align: center;
+    vertical-align: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+.cell {
+    width: 150px;
+    height: 150px;
+    box-shadow: 0 0 0 1px #333333;
+    border: 1px solid #333333;
+    cursor: pointer;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 15px;
+    font-size: 100px;
+    margin: auto;
+    text-align: center;
+}
+
+#button-restart {
+    margin: auto;
+}
+
+#fullpage {
+    
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 50vh;
+    background-size: contain;
+    background-repeat: no-repeat no-repeat;
+    background-position: center center;
+    
+  }
