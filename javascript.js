@@ -17,7 +17,7 @@ let options = ["", "", "", "", "", "", "", "", ""];
 let currentPlayer = "Hachi";
 let gameRunning = false;
 let cellIndex;
-let myMusic;
+let myMusic; 
 
 initializeGame();
 
